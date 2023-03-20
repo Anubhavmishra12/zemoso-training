@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Score Counter</title>
+
+  </head>
+  <body>
+    <h3>
+     Q. Create a simple application which displays two counts:Local Score, Session
+      Score and a button to increment these counts. Local score must persist in
+      Local Storage and Session score must persist in Session Storage and must
+      reset on closing the session.
+    </h3>
+    <h1>Score Counter</h1>
+    <p>Local score: <span id="localScore"></span></p>
+    <p>Session score: <span id="sessionScore"></span></p>
+    <button onclick="incrementLocal(); incrementSession();">
+      Increment Scores
+    </button>
+
+    <script src="storage.js">
+
+    </script>
+  </body>
+</html>
