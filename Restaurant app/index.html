@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <sc rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container" style="position: relative" id="container">
+      <div class="tables">
+        <h4>Tables</h4>
+        <div class="search">
+          <input
+            type="text"
+            onkeyup="searchTables()"
+            placeholder="Search table"
+            id="tablesSearch"
+          />
+        </div>
+        <div id="tables">
+          <div class="table" id="table-1">
+            <h2 class="table-name-tag">Table-1</h2>
+            <div>
+              <p>
+                Rs.<span id="total-price-1">0</span> | Total items:
+                <span id="total-items-1">0</span>
+              </p>
+            </div>
+          </div>
+          <div class="table" id="table-2">
+            <h2 class="table-name-tag">Table-2</h2>
+            <div>
+              <p>
+                Rs.<span id="total-price-2">0</span> | Total items:
+                <span id="total-items-2">0</span>
+              </p>
+            </div>
+          </div>
+          <div class="table" id="table-3">
+            <h2 class="table-name-tag">Table-3</h2>
+            <div>
+              <p>
+                Rs.<span id="total-price-3">0</span> | Total items:
+                <span id="total-items-3">0</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <h4>Menu</h4>
+        <div class="searchR">
+          <input
+            type="text"
+            id="menuSearch"
+            onkeyup="searchMenu()"
+            placeholder="Search menu..by course, by food"
+          />
+        </div>
+        <div id="menu-elements">
+          <p id="demo"></p>
+          <div class="menu-items" id="menu-item" draggable="true">
+            <h2>Chowmein
+              <span style="visibility: hidden;">starters</span>
+            </h2>
+            <div>
+              <p style="margin-top: 16px; margin-bottom: 48px">105.00</p>
+            </div>
+          </div>
+          <div class="menu-items" id="menu-item" draggable="true">
+            <h2>Pasta
+              <span style="visibility: hidden;">starters</span>
+            </h2>
+            <div>
+              <p style="margin-top: 16px; margin-bottom: 48px">105.00</p>
+            </div>
+          </div>
+          <div class="menu-items" id="menu-item" draggable="true">
+            <h2>French Fries
+              <span style="visibility: hidden;">starters</span>
+            </h2>
+            <div>
+              <p style="margin-top: 16px; margin-bottom: 48px">105.00</p>
+            </div>
+          </div>
+          <div class="menu-items" id="menu-item" draggable="true">
+            <h2>Cupcake
+              <span style="visibility: hidden;">dessert</span>
+            </h2>
+            <div>
+              <p style="margin-top: 16px; margin-bottom: 48px">105.00</p>
+            </div>
+          </div>
+          <div class="menu-items" id="menu-item" draggable="true">
+            <h2>Vanilla Pastry
+              <span style="visibility: hidden;">dessert</span>
+            </h2>
+            <div>
+              <p style="margin-top: 16px; margin-bottom: 48px">135.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-details" id="order-details" style="opacity: 0">
+      <div id="order-label">
+        <h4 style="color: white; font-weight: 500">
+          <span id="table-no">Table-1</span> | Order Details
+        </h4>
+        <h4 style="color: white; font-weight: 500" id="close-button">X</h4>
+      </div>
+      <div style="background-color: white; box-sizing: border-box">
+        <table
+          id="orders"
+          style="padding: 16px 16px 0px 16px; box-sizing: border-box"
+        ></table>
+      </div>
+      <div class="button-div">
+        <button id="bill">CLOSE SESSION (GENERATE BILL)</button>
+      </div>
+    </div>
+    <div
+      class="check-out"
+      id="check-out"
+      style="opacity: 0; visibility: hidden"
+    >
+      <div
+        id="order-label"
+        style="
+          display: flex;
+          background-color: rgb(170, 0, 255);
+          box-sizing: border-box;
+          justify-content: space-between;
+          padding-left: 8px;
+          padding-right: 24px;
+        "
+      >
+        <h4 style="color: white; font-weight: 500">Checkout Details</h4>
+        <h4 style="color: white; font-weight: 500" id="close-button-checkout">
+          X
+        </h4>
+      </div>
+      <div style="background-color: white; box-sizing: border-box">
+        <table
+          id="check-out-orders"
+          class="checkout-table"
+          style="padding: 0px 16px 0px 16px; box-sizing: border-box"
+        ></table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
